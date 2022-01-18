@@ -14,7 +14,7 @@ const getBeepTimes = (args) => {
 
 let beepTimes = getBeepTimes(process.argv);
 // Loop through beeptimes and output sound after delay
-for (const time in beepTimes) {
+for (const time of beepTimes) {
   setTimeout(() => {
     process.stdout.write("\x07");
   }, time);
